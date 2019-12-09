@@ -1,68 +1,48 @@
 <template>
-  <div class="md:flex">
-    <div class="md:flex-shrink-0">
-      <img class="rounded-lg md:w-56" src="https://images.unsplash.com/photo-1556740738-b6a63e27c4df?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=448&q=80" alt="Woman paying for a purchase">
-    </div>
-    <div class="mt-4 md:mt-0 md:ml-6">
-      <div class="uppercase tracking-wide text-sm text-indigo-600 font-bold">
-        Marketing
+  <div>
+    <div class="max-w-sm rounded overflow-hidden shadow-lg mb-4">
+      <img
+        class="w-full"
+        src="https://tailwindcss.com/img/card-top.jpg"
+        alt="Sunset in the mountains"
+      >
+      <div class="px-6 py-4 pb-2">
+        <div class="font-bold text-xl mb-2">
+          The Coldest Sunset
+        </div>
+        <p
+          class="text-gray-700 text-base"
+        >
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus quia, nulla! Maiores et perferendis eaque, exercitationem praesentium nihil.
+        </p>
       </div>
-      <a href="#" class="block mt-1 text-lg leading-tight font-semibold text-gray-900 hover:underline">Finding customers for your new business</a>
-      <p class="mt-2 text-gray-600 custom-p">
-        Getting a new business off the ground is a lot of hard work. Here are five ideas you can use to find your first customers.
-      </p>
+      <div class="px-6 py-4">
+        <span class="badge mr-2">#photography</span>
+        <span class="badge mr-2">#travel</span>
+        <span class="badge">#winter</span>
+      </div>
     </div>
+    <n-link to="about">
+      <t-button>About</t-button>
+    </n-link>
   </div>
 </template>
 
 <script>
+import TButton from '~/components/TButton'
 
 export default {
   components: {
-
-  },
-  methods: {
-    hello () {
-
-    }
+    TButton
   }
 }
 </script>
 
-<style>
-/* Sample `apply` at-rules with Tailwind CSS
-.container {
-  @apply min-h-screen flex justify-center items-center text-center mx-auto;
-}
-*/
-.container {
-  margin: 0 auto;
-  min-height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.title {
-  font-family: 'Quicksand', 'Source Sans Pro', -apple-system, BlinkMacSystemFont,
-    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  display: block;
-  font-weight: 300;
-  font-size: 100px;
-  color: #35495e;
-  letter-spacing: 1px;
-}
-
-.subtitle {
-  font-weight: 300;
-  font-size: 42px;
-  color: #526488;
-  word-spacing: 5px;
-  padding-bottom: 15px;
-}
-
-.links {
-  padding-top: 15px;
+<style scoped>
+.badge {
+  @apply inline-block bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700;
+  &:hover {
+    @apply bg-gray-300;
+  }
 }
 </style>
